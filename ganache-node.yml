@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  node:
+    container_name: ganache-node
+    image: dinhgihot/ganache-node:latest
+    restart: on-failure
+    ports:
+      - "8545:8545"
+    volumes:
+      - ./lib:/usr/src/app/keys
